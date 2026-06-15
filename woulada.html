@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WOULADA DIGITAL HUB</title>
+  <meta name="description" content="WOULADA Digital Hub - plateforme marketing et e-commerce pour vendre, acheter, promouvoir et communiquer avec une experience moderne et responsive.">
+  <meta name="keywords" content="e-commerce, digital marketing, marketplace, publicites, vente en ligne, marketing numerique, seller dashboard">
+  <meta name="theme-color" content="#0057ff">
+  <meta property="og:title" content="WOULADA DIGITAL HUB">
+  <meta property="og:description" content="Achetez, vendez et promouvez vos produits sur une plateforme numerique moderne.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=WOULADA+Digital+Hub">
+  <link rel="stylesheet" href="../woulada.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="navbar container">
+      <a href="#home" class="brand">WOULADA DIGITAL HUB</a>
+      <button class="menu-toggle" aria-label="Ouvrir le menu">Menu</button>
+      <ul class="nav-links">
+        <li><a href="#home">Accueil</a></li>
+        <li><a href="#products">Produits</a></li>
+        <li><a href="#sellers">Vendre</a></li>
+        <li><a href="#ads">Publicites</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="login-btn">Connexion</button>
+        <button class="cart-toggle" aria-label="Ouvrir le panier">Panier <span class="cart-count">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Plateforme marketing & e-commerce</span>
+          <h1>Boostez vos ventes et creez des campagnes publicitaires percutantes.</h1>
+          <p>WOULADA Digital Hub reunit produits, annonces, communication et gestion de vendeur dans une interface responsive, moderne et prete pour une integration backend future.</p>
+          <div class="hero-actions">
+            <button class="primary-btn" id="heroStart">Commencer</button>
+            <a href="#products" class="secondary-btn">Voir les produits</a>
+          </div>
+          <div class="hero-highlights">
+            <div>
+              <strong>+1200</strong>
+              <p>Vendeurs actifs</p>
+            </div>
+            <div>
+              <strong>15K+</strong>
+              <p>Publicites crees</p>
+            </div>
+            <div>
+              <strong>24/7</strong>
+              <p>Support client</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-media">
+          <div class="hero-card">
+            <img src="https://via.placeholder.com/600x500.png?text=WOULADA+Marketplace" alt="Marketplace illustration">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features container">
+      <article>
+        <h2>Interface claire</h2>
+        <p>Experience utilisateur fluide pour les acheteurs et les vendeurs sur desktop et mobile.</p>
+      </article>
+      <article>
+        <h2>Gestion de produit</h2>
+        <p>Creez, gerez et publiez des annonces produit en quelques clics.</p>
+      </article>
+      <article>
+        <h2>Communication integree</h2>
+        <p>Messagerie, appels vocaux et video pour rester en contact avec vos clients.</p>
+      </article>
+    </section>
+
+    <section class="product-search container">
+      <div class="search-bar">
+        <label for="searchInput">Recherche produits</label>
+        <input id="searchInput" type="search" placeholder="Rechercher par nom, categorie ou prix">
+      </div>
+      <div class="filters">
+        <button class="filter-btn active" data-category="all">Tous</button>
+        <button class="filter-btn" data-category="electronics">Electronique</button>
+        <button class="filter-btn" data-category="fashion">Mode</button>
+        <button class="filter-btn" data-category="home">Maison</button>
+        <button class="filter-btn" data-category="beauty">Beauté</button>
+      </div>
+    </section>
+
+    <section id="products" class="products container">
+      <div class="section-header">
+        <div>
+          <span>Marketplace</span>
+          <h2>Produits populaires</h2>
+        </div>
+        <p>Decouvrez des offres selectionnees, ajoutez-les dans votre panier et commencez de vendre avec des fiches produit performantes.</p>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section id="sellers" class="seller-dashboard">
+      <div class="container seller-grid">
+        <div class="seller-info">
+          <h2>Tableau de bord vendeur</h2>
+          <p>Gerez vos annonces, suivez vos indicateurs et accedez aux outils de promotion.</p>
+          <div class="dashboard-metrics">
+            <div>
+              <span>215</span>
+              <p>Ventes ce mois</p>
+            </div>
+            <div>
+              <span>3.8K</span>
+              <p>Visites produit</p>
+            </div>
+            <div>
+              <span>94%</span>
+              <p>Taux de conversion</p>
+            </div>
+          </div>
+          <button class="secondary-btn" id="openSellerDashboard">Acceder au dashboard</button>
+        </div>
+        <div class="seller-preview">
+          <h3>Annonce rapide</h3>
+          <form id="sellerForm" class="seller-form">
+            <input type="text" id="sellerTitle" placeholder="Titre du produit" required>
+            <input type="text" id="sellerCategory" placeholder="Categorie" required>
+            <input type="number" id="sellerPrice" placeholder="Prix ($)" min="1" required>
+            <textarea id="sellerDescription" placeholder="Description courte" rows="4" required></textarea>
+            <button type="submit" class="primary-btn">Creer une annonce</button>
+          </form>
+          <p class="form-note">Ce formulaire simule l'ajout d'une annonce et pourra etre integre au backend plus tard.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="ads" class="ads container">
+      <div class="section-header">
+        <div>
+          <span>Publicites</span>
+          <h2>Services photo et video</h2>
+        </div>
+        <p>Utilisez nos modeles marketing visuels pour capter l'attention avec des publicites sponsorisees de haute qualite.</p>
+      </div>
+      <div class="ads-grid">
+        <article class="ad-card">
+          <img src="https://via.placeholder.com/520x320.png?text=Photo+Ad" alt="Photo publicitaire">
+          <h3>Campagne photo</h3>
+          <p>Creation de visuels professionnels pour vos produits et annonces.</p>
+        </article>
+        <article class="ad-card">
+          <div class="video-wrapper">
+            <video controls preload="metadata" poster="https://via.placeholder.com/520x320.png?text=Vid%C3%A9o+Ad">
+              <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h3>Publicite video</h3>
+          <p>Montages dynamiques adapts tous les canaux marketing.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="messaging" class="messaging container">
+      <div class="section-header">
+        <div>
+          <span>Communication</span>
+          <h2>Messagerie et appels</h2>
+        </div>
+        <p>Restez connecte avec vos clients via un systeme de chat, un appel vocal ou une reunion video.</p>
+      </div>
+      <div class="messaging-grid">
+        <div class="conversation-list">
+          <h3>Conversations</h3>
+          <button class="conversation-item active" data-user="Claire"></button>
+          <button class="conversation-item" data-user="Alex"></button>
+          <button class="conversation-item" data-user="Sofia"></button>
+        </div>
+        <div class="conversation-panel">
+          <div class="conversation-header">
+            <div>
+              <span id="chatUserName">Claire</span>
+              <p>Dernier message reu il y a 2 min</p>
+            </div>
+            <div class="call-actions">
+              <button class="icon-btn" id="voiceCallBtn">Appel vocal</button>
+              <button class="icon-btn" id="videoCallBtn">Appel video</button>
+            </div>
+          </div>
+          <div class="chat-window" id="chatWindow"></div>
+          <form id="chatForm" class="chat-form">
+            <input id="chatInput" type="text" placeholder="Ecrire un message..." required>
+            <button type="submit" class="primary-btn">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact container">
+      <div class="section-header">
+        <div>
+          <span>Support</span>
+          <h2>Contactez-nous</h2>
+        </div>
+        <p>Posez vos questions, partagez un brief marketing ou demandez un accompagnement pour votre boutique.</p>
+      </div>
+      <div class="contact-grid">
+        <form id="contactForm" class="contact-form">
+          <input type="text" id="contactName" placeholder="Nom complet" required>
+          <input type="email" id="contactEmail" placeholder="Email" required>
+          <input type="text" id="contactSubject" placeholder="Objet" required>
+          <textarea id="contactMessage" placeholder="Votre message" rows="6" required></textarea>
+          <button type="submit" class="primary-btn">Envoyer le message</button>
+          <p class="contact-feedback" id="contactFeedback"></p>
+        </form>
+        <div class="contact-details">
+          <h3>Notre adresse</h3>
+          <p>123 Rue du Digital, Paris, France</p>
+          <p>Email : wouladadigitalhub@gmail.com</p>
+          <p>
+            Telephone :+224 627 455 813
+           <p>WhatsApp :+6011 173 846 011 
+            or <a href="Telephone:+224627455813">Telephone</a>
+           </p> 
+          </p>
+          <div class="contact-cards">
+            <article>
+              <h4>Assistance rapide</h4>
+              <p>Reponse en moins de 24 heures.</p>
+            </article>
+            <article>
+              <h4>Gestion marketing</h4>
+              <p>Conseils pour vos campagnes publicitaires.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="cart-panel" id="cartPanel" aria-hidden="true">
+    <div class="cart-header">
+      <h2>Panier</h2>
+      <button class="close-panel" id="closeCart">Fermer</button>
+    </div>
+    <div class="cart-content" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">0 $</strong>
+      </div>
+      <button class="primary-btn purchase-btn" id="checkoutBtn">Commander</button>
+    </div>
+  </aside>
+
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+
+  <div class="auth-modal" id="authModal" aria-hidden="true">
+    <div class="auth-panel">
+      <button class="close-panel" id="closeAuth">�</button>
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-form="loginForm">Connexion</button>
+        <button class="auth-tab" data-form="registerForm">Inscription</button>
+      </div>
+      <form id="loginForm" class="auth-form active">
+        <h3>Connexion</h3>
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPassword" placeholder="Mot de passe" required>
+        <button type="submit" class="primary-btn">Se connecter</button>
+      </form>
+      <form id="registerForm" class="auth-form">
+        <h3>Inscription</h3>
+        <input type="text" id="registerName" placeholder="Nom complet" required>
+        <input type="email" id="registerEmail" placeholder="Email" required>
+        <input type="password" id="registerPassword" placeholder="Mot de passe" required>
+        <button type="submit" class="primary-btn">Creer un compte</button>
+      </form>
+      <p class="auth-note">Tout est pret pour l'integration backend : authentification, enregistrements et gestion de vendeur.</p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h2>WOULADA DIGITAL HUB</h2>
+        <p>Plateforme e-commerce et marketing moderne pour developper votre activite en ligne.</p>
+      </div>
+      <div>
+        <h3>Liens utiles</h3>
+        <ul>
+          <li><a href="#products">Produits</a></li>
+          <li><a href="#sellers">Vendre</a></li>
+          <li><a href="#ads">Publicites</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Newsletter</h3>
+        <p>Recevez des conseils marketing et des promotions exclusives.</p>
+        <form id="newsletterForm" class="newsletter-form">
+          <input type="email" id="newsletterEmail" placeholder="Email" required>
+          <button type="submit">S'inscrire</button>
+        </form>
+      </div>
+    </div>
+    <p class="footer-note">© 2026 WOULADA DIGITAL HUB - Tous droits réservés.</p>
+  </footer>
+
+  <script src="woulada.js" defer></script>
+</body>
+</html>
